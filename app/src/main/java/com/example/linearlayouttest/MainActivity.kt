@@ -22,20 +22,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.testlayout)
-
          tvResult.text ="0"
-
         implementsmethods()
-
-
     }
 
     private fun implementsmethods() {
-
         functionalButton()
         operationButton()
         numericalButton()
-
     }
 
     private fun operationButton() {
@@ -194,7 +188,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             'E' -> {
-                var percent = left_part/100
+                var percent = (left_part/right_part)*100
                 tvResult.text = percent.toString()
                 digit_to_String.append(percent)
             }
